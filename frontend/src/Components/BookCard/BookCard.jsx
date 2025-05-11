@@ -15,16 +15,21 @@ const BookCard = ({ data, favourite }) => {
   }
   return (
     <>
-
       <div className="bg-zinc-700 p-4 rounded">
         <Link to={`/view-book-details/${data._id}`}>
           <div className="">
             <div className="bg-zinc-800 rounded flex items-center justify-center">
               <img src={data.url} alt="" className="h-[28vh]" />
             </div>
-            <h2 className="mt-4 textxl font-semibold text-zinc-200">{data.title}</h2>
-            <p className="text-zinc-400 font-semibold mt-2">by {data.author}</p>
-            <p className="text-zinc-200 font-semibold mt-2">&#8377; {data.price}</p>
+            <h2 className="mt-4 text-xl font-semibold text-zinc-200 bg-zinc-800 px-4 py-2 rounded-lg shadow-md text-center hover:text-emerald-400 transition duration-300">
+              {data.title}
+            </h2>
+            <p className="mt-2 text-sm font-medium text-zinc-300 bg-zinc-800 px-3 py-2 rounded-lg shadow-sm hover:bg-zinc-700 transition duration-300">
+              by <span className="text-emerald-400">{data.author}</span>
+            </p>
+            <p className="text-3xl font-bold mt-2 animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-400 transition-transform transform hover:scale-110">
+              ₹{data.price}
+            </p>
           </div>
         </Link>
         {
