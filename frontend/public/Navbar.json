@@ -1,0 +1,22 @@
+[
+    {
+        "navbaritem":"Home",
+        "link":""
+    },
+    {
+        "navbaritem":"AllBooks",
+         "link":"/all-books"
+    },
+    {
+        "navbaritem":"Cart",
+         "link":"/cart"
+    },
+    {
+        "navbaritem":"Profile",
+         "link":"/profile"
+    },
+    {
+        "navbaritem":"Admin Profile",
+         "link":"/profile"
+    }
+]
