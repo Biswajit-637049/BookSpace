@@ -29,9 +29,13 @@ const App = () => {
       dispatch(authActions.login());
       dispatch(authActions.changeRole(localStorage.getItem("role")));
     }
-  }, [])
+  }, [dispatch]);
+  const handleContextMenu = (e) => {
+    e.preventDefault();
+    alert("double click not allow by Banty");// Prevent right-click context menu
+  };
   return (
-    <div>
+    <div onContextMenu={handleContextMenu}>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
