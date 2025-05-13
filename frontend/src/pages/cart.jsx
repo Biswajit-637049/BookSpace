@@ -66,7 +66,7 @@ export function Cart() {
                             Cart.map((items, i) => (
                                 <div className="w-full my-4 rounded flex flex-col md:flex-row p-4 bg-zinc-800 justify-between items-center" key={i}>
                                     <img src={items.url} alt="/" className="h-[20vh] md:h-[10vh] " />
-                                    <div className="w-full md:w-auto">
+                                    <div className="w-full md:w-auto ms-3">
                                         <h1 className="text-2xl font-semibold text-zinc-100 text-start mt-2 md:mt-0">{items.title}</h1>
                                         <p className="text-normal text-zinc-300 mt-2 hidden lg:block">{items.desc.slice(0, 100)}...</p>
                                         <p className="text-normal text-zinc-300 mt-2 hidden lg:hidden md:block">{items.desc.slice(0, 65)}...</p>

@@ -72,10 +72,10 @@ const Sidebar = ({ data }) => {      //props
           localStorage.clear("role");
           history("/");
         }}
-        className="bg-red-600 hover:bg-red-700 active:bg-red-800 text-white font-semibold flex items-center justify-center w-full p-3 rounded-lg shadow-md hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 active:translate-y-0 active:scale-95 focus:outline-none focus:ring-4 focus:ring-red-300"
+        className="bg-red-600 hover:bg-red-700 hover:cursor-pointer active:bg-red-800 text-white font-semibold flex items-center justify-center w-full p-3 rounded-lg shadow-md hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 active:translate-y-0 active:scale-95 focus:outline-none focus:ring-4 focus:ring-red-300"
       >
         Log Out
-        <FaArrowRightFromBracket className="ms-3 text-lg" />
+        <FaArrowRightFromBracket className="ms-3 text-lg transform transition-transform duration-300 group-hover:-translate-x-1 group-active:scale-90" />
       </button>
     </div>
   )

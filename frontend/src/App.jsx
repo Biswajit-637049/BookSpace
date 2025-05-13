@@ -31,11 +31,16 @@ const App = () => {
     }
   }, [dispatch]);
   const handleContextMenu = (e) => {
-    e.preventDefault();
+   e.preventDefault();
     alert("double click not allow by Banty");// Prevent right-click context menu
   };
+    const handleCopy = (e) => {
+    e.preventDefault();
+    alert("Copying is disabled by Banty.");
+  };
+
   return (
-    <div onContextMenu={handleContextMenu}>
+    <div onContextMenu={handleContextMenu} onCopy={handleCopy}>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
