@@ -15,7 +15,7 @@ const BookCard = ({ data, favourite }) => {
   }
   return (
     <>
-      <div className="bg-zinc-700 p-4 rounded h-[60vh]">
+      <div className="bg-zinc-700 p-4 rounded h-[60vh] flex flex-col justify-between">
         <Link to={`/view-book-details/${data._id}`}>
           <div className="">
             <div className="bg-zinc-800 rounded flex items-center justify-center">
@@ -34,7 +34,7 @@ const BookCard = ({ data, favourite }) => {
         </Link>
         {
           favourite && (
-            <button className="px-5 py-2 bg-gradient-to-r from-red-500 to-red-600 hover:cursor-pointer hover:from-red-600 hover:to-red-700 text-sm text-white font-semibold rounded-md w-full shadow-lg transform hover:-translate-y-1 hover:scale-105 transition duration-300 ease-in-out mt-3" onClick={handleRemoveBook}>
+            <button className="px-5 py-2 bg-gradient-to-r from-red-500 to-red-600 hover:cursor-pointer hover:from-red-600 hover:to-red-700 text-sm text-white font-semibold rounded-md w-full shadow-lg transform hover:-translate-y-1 hover:scale-105 transition duration-300 ease-in-out" onClick={handleRemoveBook}>
               Remove from Favourite
             </button>
           )
