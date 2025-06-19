@@ -24,11 +24,11 @@ const AllOrder = () => {
   };
   const submitChange = async (i) => {
     const id = AllOrders[i]._id;
-    const response = await axios.put(`http://localhost:1000/api/v1/update-status/${id}`, Values, { headers });
+    const response = await axios.put(`https://bookspace-72oz.onrender.com/api/v1/update-status/${id}`, Values, { headers });
     alert(response.data.message);
   }
   useEffect(() => {
-    axios.get(`http://localhost:1000/api/v1/get-all-orders`, { headers })
+    axios.get(`https://bookspace-72oz.onrender.com/api/v1/get-all-orders`, { headers })
       .then((response) => {
         setAllOrders(response.data.data);
       })

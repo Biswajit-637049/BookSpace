@@ -5,7 +5,7 @@ import Loader from '../Components/loader/Loader'
 export function AllBooks() {
     const [Data, setData] = useState()
     useEffect(() => {
-        axios.get("http://localhost:1000/api/v1/get-all-books")
+        axios.get("https://bookspace-72oz.onrender.com/api/v1/get-all-books")
             .then(response => {
                 setData(response.data.data)
             })

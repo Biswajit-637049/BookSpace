@@ -10,14 +10,14 @@ const Settings = () => {
     authorization: `Bearer ${localStorage.getItem("token")}`
   };
   useEffect(() => {
-    axios.get(`http://localhost:1000/api/v1/get-user-information`, { headers })
+    axios.get(`https://bookspace-72oz.onrender.com/api/v1/get-user-information`, { headers })
       .then((response) => {
         setProfileData(response.data);
         setValue({ address: response.data.address });
       })
   }, [])
   function submitAddress() {
-    axios.put(`http://localhost:1000/api/v1/update-address`, { address: Value.address }, { headers })
+    axios.put(`https://bookspace-72oz.onrender.com/api/v1/update-address`, { address: Value.address }, { headers })
       .then(response => {
         alert(response.data.message);
       })

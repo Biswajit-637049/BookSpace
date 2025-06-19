@@ -11,7 +11,7 @@ const UpdateBook = () => {
     const [Data, setData] = useState({ url: "", title: "", author: "", price: 0, desc: "", language: "" });
     let { id } = useParams();
     useEffect(() => {
-        axios.get(`http://localhost:1000/api/v1/get-book-by-id/${id}`)
+        axios.get(`https://bookspace-72oz.onrender.com/api/v1/get-book-by-id/${id}`)
             .then(response => {
                 setData(response.data.data);
             })
@@ -29,7 +29,7 @@ const UpdateBook = () => {
             language: Data.language
         },
         onSubmit: (book) => {
-            axios.put(`http://localhost:1000/api/v1/update-book`, book, { headers: { ...headers, bookid: id } })
+            axios.put(`https://bookspace-72oz.onrender.com/api/v1/update-book`, book, { headers: { ...headers, bookid: id } })
                 .then((response) => {
                     alert(response.data.message);
                     navigate("/all-books");

@@ -16,7 +16,7 @@ const ViewBookDetails = () => {
     const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
     const role = useSelector((state) => state.auth.role);
     useEffect(() => {
-        axios.get(`http://localhost:1000/api/v1/get-book-by-id/${id}`)
+        axios.get(`https://bookspace-72oz.onrender.com/api/v1/get-book-by-id/${id}`)
             .then(response => {
                 setData(response.data.data);
             })
@@ -30,7 +30,7 @@ const ViewBookDetails = () => {
         bookid: id
     };
     function handleFavourite() {
-        axios.put(`http://localhost:1000/api/v1/add-book-to-favourite`, {}, { headers }) // (url, body, { config }) empty data body (because you’re not sending any body data)
+        axios.put(`https://bookspace-72oz.onrender.com/api/v1/add-book-to-favourite`, {}, { headers }) // (url, body, { config }) empty data body (because you’re not sending any body data)
             .then((response) => {
                 alert(response.data.message);
             })
@@ -39,7 +39,7 @@ const ViewBookDetails = () => {
             });
     };
     function handleCart() {
-        axios.put(`http://localhost:1000/api/v1/add-to-cart`, {}, { headers }) // (url, body, { config }) empty data body (because you’re not sending any body data)
+        axios.put(`https://bookspace-72oz.onrender.com/api/v1/add-to-cart`, {}, { headers }) // (url, body, { config }) empty data body (because you’re not sending any body data)
             .then((response) => {
                 alert(response.data.message);
             })
@@ -48,7 +48,7 @@ const ViewBookDetails = () => {
             });
     }
     function deleteBook() {
-        axios.delete(`http://localhost:1000/api/v1/delete-book`, { headers })
+        axios.delete(`https://bookspace-72oz.onrender.com/api/v1/delete-book`, { headers })
             .then((response) => {
                 alert(response.data.message);
                 navigate("/all-books");

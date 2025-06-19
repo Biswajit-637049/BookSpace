@@ -24,7 +24,7 @@ const AddBook = () => {
             language: yup.string().required("language is required")
         }),
         onSubmit: (book,{resetForm}) => {
-            axios.post(`http://localhost:1000/api/v1/add-book`, book, { headers })
+            axios.post(`https://bookspace-72oz.onrender.com/api/v1/add-book`, book, { headers })
                 .then((response) => {
                     alert(response.data.message);
                     resetForm();//This clears the form fields

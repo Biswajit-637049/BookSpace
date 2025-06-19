@@ -6,7 +6,7 @@ import Loader from '../loader/Loader'
 const RecentlyAdded = () => {
     const [Data, setData] = useState()
     useEffect(() => {
-        axios.get("http://localhost:1000/api/v1/get-recent-books")
+        axios.get("https://bookspace-72oz.onrender.com/api/v1/get-recent-books")
             .then(response => {
                 setData(response.data.data)
             })

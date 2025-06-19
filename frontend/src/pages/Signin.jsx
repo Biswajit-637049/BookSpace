@@ -23,7 +23,7 @@ export function Signin() {
             address: yup.string().required("Address is required")
         }),
         onSubmit: (user) => {
-            axios.post(`http://localhost:1000/api/v1/sign-up`, user)
+            axios.post(`https://bookspace-72oz.onrender.com/api/v1/sign-up`, user)
                 .then(() => {
                   //  console.log("registered");
                     alert("Registered Successfully");

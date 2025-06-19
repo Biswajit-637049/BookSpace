@@ -9,7 +9,7 @@ const Favourite = () => {
         authorization: `Bearer ${localStorage.getItem("token")}`
     };
     useEffect(() => {
-        axios.get(`http://localhost:1000/api/v1/get-favourite-books`, { headers })
+        axios.get(`https://bookspace-72oz.onrender.com/api/v1/get-favourite-books`, { headers })
             .then((response) => {
                 setFavouriteBooks(response.data.data)
             })

@@ -8,7 +8,7 @@ const BookCard = ({ data, favourite }) => {
     bookid: data._id
   };
   function handleRemoveBook() {
-    axios.delete(`http://localhost:1000/api/v1/delete-book-from-favourite`, { headers })
+    axios.delete(`https://bookspace-72oz.onrender.com/api/v1/delete-book-from-favourite`, { headers })
       .then((response) => {
         alert(response.data.message);
       })

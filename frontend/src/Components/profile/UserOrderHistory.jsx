@@ -9,7 +9,7 @@ const UserOrderHistory = () => {
     authorization: `Bearer ${localStorage.getItem("token")}`
   };
   useEffect(() => {
-    axios.get(`http://localhost:1000/api/v1/get-order-history`, { headers })
+    axios.get(`https://bookspace-72oz.onrender.com/api/v1/get-order-history`, { headers })
       .then((response) => {
         setOrderHistory(response.data.data);
       })

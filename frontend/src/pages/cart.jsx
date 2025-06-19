@@ -14,7 +14,7 @@ export function Cart() {
         authorization: `Bearer ${localStorage.getItem("token")}`
     };
     useEffect(() => {
-        axios.get(`http://localhost:1000/api/v1/get-user-cart`, { headers })
+        axios.get(`https://bookspace-72oz.onrender.com/api/v1/get-user-cart`, { headers })
             .then((response) => {
                 setCart(response.data.data)
             })
@@ -23,13 +23,13 @@ export function Cart() {
             })
     }, [Cart]);
     function removeCart(id) {
-        axios.put(`http://localhost:1000/api/v1/remove-from-cart/${id}`, {}, { headers })//url,body,header(body for empty {} not defined server error is come)
+        axios.put(`https://bookspace-72oz.onrender.com/api/v1/remove-from-cart/${id}`, {}, { headers })//url,body,header(body for empty {} not defined server error is come)
             .then((response) => {
                 alert(response.data.message);
             })
     };
     function placeOrder() {
-        axios.post(`http://localhost:1000/api/v1/place-order`, { order: Cart }, { headers })
+        axios.post(`https://bookspace-72oz.onrender.com/api/v1/place-order`, { order: Cart }, { headers })
             .then((response) => {
                 alert(response.data.message);
                 navigate("/profile/orderhistory");
